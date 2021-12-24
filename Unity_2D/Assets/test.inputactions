@@ -1,0 +1,33 @@
+{
+    "name": "test",
+    "maps": [
+        {
+            "name": "KeyBoard",
+            "id": "1c68403f-1fe1-4a45-8b30-36801f388a15",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "badc76f1-2e89-4f6d-bf3e-ce9d09318bf1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c6907532-7c37-4a99-8cfc-42a037686976",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
