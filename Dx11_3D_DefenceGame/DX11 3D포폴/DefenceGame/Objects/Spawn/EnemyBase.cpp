@@ -153,7 +153,3 @@ void EnemyBase::FunctionalTest01()
 
 	ASTAR->Reset();	//노드들 상태 초기화
 }
-
-void EnemyBase::FunctionalTest02()
-{
-}

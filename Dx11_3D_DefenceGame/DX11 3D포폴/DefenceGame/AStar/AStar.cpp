@@ -148,6 +148,8 @@ vector<Vector3> AStar::FindPath(int start, int end)
 
 	int curIndex = 0;
 
+	Reset();
+
 	while (true)
 	{
 		curIndex = GetMinNode();
@@ -161,7 +163,7 @@ vector<Vector3> AStar::FindPath(int start, int end)
 		//노드 상태에따라 차별 적용
 		if(nodes[curIndex]->state < OBSTACLE)
 			nodes[curIndex]->state = CLOSED;
-		else if(nodes[curIndex]->state > CASTLE &&
+		else if(nodes[curIndex]->state >= CASTLE &&
 				nodes[curIndex]->state < MAZE_ROAD)
 			nodes[curIndex]->state = MONSTER_CLOSED;
 		else if(nodes[curIndex]->state >= MAZE_ROAD)
@@ -183,6 +185,7 @@ vector<Vector3> AStar::FindPath(int start, int end)
 	path.push_back(nodes[curIndex]->pos);
 	heap->Clear();
 
+	Reset();
 	return path;
 }
 
@@ -191,15 +194,17 @@ vector<Vector3> AStar::FindCloseFBasePath(int start)
 	vector<Vector3> closePath;
 	closePath.clear();
 
+	Reset();
+
 	for (UINT i = 0; i < SPAWN->GetFBaseSize(); i++)
 	{
+		if (SPAWN->GetFBase(i)->GetCharacterCount() <= 0)
+			continue;
+
 		bool check = true;
 
 		vector<Vector3> path;
 		path.clear();
-
-		if (SPAWN->GetFBase(i)->GetCharacterCount() == 0)
-			continue;
 
 		int end = FindCloseNode(SPAWN->GetFBase(i)->GetPos());
 		float G = 0.0f;
@@ -254,6 +259,7 @@ vector<Vector3> AStar::FindCloseFBasePath(int start)
 		}
 	}
 
+	Reset();
 	return closePath;
 }
 

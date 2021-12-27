@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\sanghwa\Desktop\dx11_3D_포폴\DX11 3D포폴\DefenceGame\Libraries;C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\sanghwa\Desktop\dx11_3D_포폴\DX11 3D포폴\DefenceGame\Libraries;C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\sanghwa\Desktop\PortPolilo\Dx11_3D_DefenceGame\DX11 3D포폴\DefenceGame\Libraries;C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\sanghwa\Desktop\PortPolilo\Dx11_3D_DefenceGame\DX11 3D포폴\DefenceGame\Libraries;C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

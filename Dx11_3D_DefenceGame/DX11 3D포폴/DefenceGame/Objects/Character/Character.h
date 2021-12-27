@@ -79,7 +79,7 @@ public:
 	void Attack(UINT instanceID);
 	void Dead(UINT instanceID);
 
-	void EnemyPath(UINT instanceID, Vector3 dest = Vector3(-1, 0, 0));
+	void EnemyPath(UINT instanceID);
 
 protected:
 	void SetMinCursor();

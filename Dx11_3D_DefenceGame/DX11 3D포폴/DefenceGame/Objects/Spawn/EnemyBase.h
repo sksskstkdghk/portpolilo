@@ -27,5 +27,4 @@ private:
 	void EraseSummonData();
 
 	void FunctionalTest01();
-	void FunctionalTest02();
 };

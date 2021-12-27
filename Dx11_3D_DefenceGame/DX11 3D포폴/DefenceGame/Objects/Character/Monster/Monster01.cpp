@@ -59,14 +59,13 @@ void Monster01::PostRender()
 
 void Monster01::CheckCrossRoad(UINT index)
 {
-	int nodeIndex = (UINT)transforms[index]->position.x + (UINT)transforms[index]->position.z * mapWidth;
+	Vector3 temp = transforms[index]->position;
+	int nodeIndex = (UINT)temp.x + (UINT)temp.z * mapWidth;
 	Node* check = ASTAR->GetNode(nodeIndex);
 
-	ASTAR->Reset();
-
 	vector<Vector3> path;
-
 	path.clear();
+
 	for (EdgeInfo* iter : check->GetEdge())
 	{
 		if (ASTAR->GetNode(iter->index)->GetState() == NONE ||
@@ -78,12 +77,22 @@ void Monster01::CheckCrossRoad(UINT index)
 		}
 	}
 
-	if(path.size() > 0)
-		if (charData[index].destPos == path[0])
+	//Friendly진지 내 캐릭터가 있고 갈 수 있는 경우
+	if (path.size() > 0)
+	{
+		if (charData[index].path[0] == path[0])
+			return;
+	}
+	//Friendly진지 내 캐릭터가 없거나 갈 수 없거나 이미 캐릭터를 전부 죽인 경우
+	else
+	{
+		temp = charData[index].path[0];
+		nodeIndex = (UINT)temp.x + (UINT)temp.z * mapWidth;
+		check = ASTAR->GetNode(nodeIndex);
+
+		if (check->GetState() == CASTLE)
 			return;
 
-	if (path.size() <= 0)
-	{
 		EnemyPath(index);
 		SetIDLE(index);
 		return;
@@ -92,7 +101,6 @@ void Monster01::CheckCrossRoad(UINT index)
 	charData[index].destPos = path[0];
 	charData[index].path.clear();
 	charData[index].path = path;
-	charData[index].path.push_back(check->GetPos());
 }
 
 C_ManagerData Monster01::Init(UINT lvl, Vector3 pos, vector<Vector3> path)

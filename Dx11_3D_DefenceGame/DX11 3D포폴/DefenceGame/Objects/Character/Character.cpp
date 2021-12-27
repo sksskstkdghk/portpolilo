@@ -195,98 +195,88 @@ void Character::ReadyToFight(UINT instanceID, C_ManagerData target)
 	}
 }
 
-//몬스터 베이스에서 경로 탐색용
-void Character::EnemyPath(UINT instanceID, Vector3 dest)
+//friendly진지 내 캐릭터를 전부 죽인 후 경로 탐색
+void Character::EnemyPath(UINT instanceID)
 {
 	Vector3 pos = transforms[instanceID]->position;
-	Vector3 destPosition = Vector3(1000, 1000, 1000);
-
-	if (dest.x < 0)
+	Vector3 destPosition;
+	
+	for (int i = 0; i < 2; i++)
 	{
-		//목적지가 어차피 성이라면 다시 경로를 짤 필요가 없음
-		if(charData[instanceID].path.size() > 0)
-			if (ASTAR->GetNode(ASTAR->FindCloseNode(charData[instanceID].path[0]))->GetState() == CASTLE)
-				return;
-
-		for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
 		{
-			for (int j = 0; j < 2; j++)
-			{
-				UINT index = mapWidth / 2 + (mapHeight / 2 - i) * mapWidth - j;
-				Vector3 check = ASTAR->GetNodes().at(index)->GetPos();
-
-				if (Distance(pos, destPosition) > Distance(pos, check))
-					destPosition = check;
-			}
+			UINT index = mapWidth / 2 + (mapHeight / 2 - i) * mapWidth - j;
+			Vector3 check = ASTAR->GetNodes().at(index)->GetPos();
+	
+			if (Distance(pos, destPosition) > Distance(pos, check))
+				destPosition = check;
 		}
 	}
-	else
-		destPosition = dest;
 
-	vector<Vector3>* path = &charData[instanceID].path;
+	ASTAR->Reset();
 
-	path->clear();
-	path->shrink_to_fit();
+	vector<Vector3> path;
 
-	ASTAR->Reset();	//노드들 상태 초기화
-
-	Ray ray;
+	/*Ray ray;
 	ray.position = pos;
-	D3DXVec3Normalize(&ray.direction, &(destPosition - pos));
+	D3DXVec3Normalize(&ray.direction, &(destPosition - pos));*/
 
 	int startIndex = ASTAR->FindCloseNode(pos);
 	int endIndex = ASTAR->FindCloseNode(destPosition);
-	float distance = Distance(pos, destPosition);
+	//float distance = Distance(pos, destPosition);
 
-	*path = ASTAR->FindPath(startIndex, endIndex);	//길을 찾음
-	if (path->size() <= 0)	//길이 없다면 리턴
+	path = ASTAR->FindPath(startIndex, endIndex);	//길을 찾음
+	if (path.size() <= 0)	//길이 없다면 리턴
 		return;
 
 	charData[instanceID].destPos = destPosition;
 
-	if (ASTAR->isCollisionObstalce(ray, distance))
+	/*if (ASTAR->isCollisionObstalce(ray, distance))
 	{
-		ASTAR->MakeDirectPath(pos, destPosition, *path);
+		ASTAR->MakeDirectPath(pos, destPosition, path);
 
-		path->insert(path->begin(), destPosition);
+		path.insert(path.begin(), destPosition);
 
-		int pathSize = path->size();
+		int pathSize = path.size();
 
-		while (path->size() > 2)
+		while (path.size() > 2)
 		{
 			vector<Vector3> tempPath;
 
-			for (int i = 1; i < path->size() - 1; i++)
-				tempPath.push_back(path->at(i));
+			for (int i = 1; i < path.size() - 1; i++)
+				tempPath.push_back(path.at(i));
 
-			Vector3 start = path->back();
-			Vector3 end = path->front();
+			Vector3 start = path.back();
+			Vector3 end = path.front();
 
 			ASTAR->MakeDirectPath(start, end, tempPath);
 
-			path->clear();
-			path->push_back(end);
+			path.clear();
+			path.push_back(end);
 
 			for (int i = 0; i < tempPath.size(); i++)
-				path->push_back(tempPath[i]);
+				path.push_back(tempPath[i]);
 
-			path->push_back(start);
+			path.push_back(start);
 
-			if (pathSize == path->size())
+			if (pathSize == path.size())
 				break;
 			else
-				pathSize = path->size();
+				pathSize = path.size();
 		}
 
-		path->insert(path->begin(), destPosition);
+		path.insert(path.begin(), destPosition);
 	}
 	else
 	{
-		path->clear();
-		path->shrink_to_fit();
+		path.clear();
+		path.shrink_to_fit();
 
-		path->push_back(destPosition);
-	}
+		path.push_back(destPosition);
+	}*/
+
+	charData[instanceID].path = path;
+	ASTAR->Reset();
 }
 
 void Character::Exporter(string name)
