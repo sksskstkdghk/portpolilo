@@ -26,8 +26,6 @@ bool FrustumCulling::Make(Matrix* mat)
 	int i;
 	Matrix matinv;	//뷰, 프로젝션 행렬에 역행렬
 
-	matinv;
-
 	//투영행렬까지 거치고나면 모든 3차원 월드좌표의 점은 (-1, -1, 0) ~ (1, 1, 1)사이의 값으로 바뀐다.
 	//vtx에 이 동차공간의 경계값을 넣어둔다
 	vtx[0] = Vector3(-1.0f, -1.0f, 0.0f);
@@ -40,6 +38,8 @@ bool FrustumCulling::Make(Matrix* mat)
 	vtx[7] = Vector3(-1.0f, 1.0f, 1.0f);
 
 	//역행렬을 구한다
+	//행렬끼리 곱한 경우 전치행렬 = 역행렬 공식이 먹히지 않음
+	//D3DXMatrixTranspose(&matinv, mat);
 	D3DXMatrixInverse(&matinv, nullptr, mat);
 
 	//vertex_최종 = vertex_local * matrix_world * matrix_view * matrix_proj인데
@@ -51,8 +51,6 @@ bool FrustumCulling::Make(Matrix* mat)
 	//그러므로, vtx * matinv = vertex_world가 되어 월드좌표계의 프러스텀 좌표를 얻을 수 있다.
 	for (i = 0; i < 8; i++)
 		D3DXVec3TransformCoord(&vtx[i], &vtx[i], &matinv);
-
-	
 
 	//0번과 5번은 프러스텀중 near평면의 좌측상단과 우측하단이므로, 둘의 좌표를 더해서 2로나누면
 	//카메라의 좌표를 얻을 수 있다.(정확히 일치하진 않음)

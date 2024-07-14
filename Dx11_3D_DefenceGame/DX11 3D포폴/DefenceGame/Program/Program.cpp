@@ -32,7 +32,7 @@ Program::~Program()
 void Program::Update()
 {
 	VP->SetView(CAMERA->GetView());
-	VP->SetProjection(Environment::Get()->GetPerspective()->GetMatrix());
+	VP->SetProjection(PERSPECTIVE->GetMatrix());
 
 	for (Scene* scene : scenes)
 		scene->Update();
@@ -79,7 +79,7 @@ void Program::PostRender()
 		ImGui::SliderFloat("cullingSize", &cullingSize, -5.0f, 1.0f);
 		//ImGui::Separator();
 		//ImGui::SliderFloat3("CamPos", CAMERA->GetPos(), -1000, 1000);
-		//ImGui::SliderFloat3("mPos", mousePos, -1000, 2000);
+		ImGui::SliderFloat3("mPos", mousePos, -1000, 2000);
 		//ImGui::SliderFloat2("CamRot", CAMERA->GetRotation(), -1000, 1000);
 		//CAMERA->PostRender();
 		//ImGui::Separator();

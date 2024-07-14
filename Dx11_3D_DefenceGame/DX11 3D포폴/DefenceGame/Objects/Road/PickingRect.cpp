@@ -27,7 +27,6 @@ bool PickingRect::Picking(Vector3* position)
 	if (D3DXIntersectTri(&p[0], &p[1], &p[2], &ray.position, &ray.direction,
 		&u, &v, &distance))
 	{
-
 		*position = p[0] + (p[1] - p[0]) * u + (p[2] - p[0]) * v;
 		return true;
 	}

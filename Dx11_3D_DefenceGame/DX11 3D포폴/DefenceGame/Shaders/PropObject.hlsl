@@ -18,7 +18,7 @@ PixelInput VS(VertexUVNormalTangent input)
     output.position = mul(input.position, boneWorld);
     
     float3 camPos = invView._41_42_43;
-    output.viewDir = normalize(output.position.xyz - camPos);
+    //output.viewDir = normalize(output.position.xyz - camPos);
     
     output.position = mul(output.position, view);
     output.position = mul(output.position, projection);

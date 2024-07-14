@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iL2sJOFyrOJLVycPIQ6/EK7owk88OjQaI2OMEWnj+kbV01iNiAPgZ1FUkkmODVqZ7bPxhnjAmyV/MCYmZMOaLg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sanghwa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

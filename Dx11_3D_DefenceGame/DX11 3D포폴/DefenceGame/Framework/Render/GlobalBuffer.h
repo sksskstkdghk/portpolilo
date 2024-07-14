@@ -20,8 +20,9 @@ public:
 	void SetView(Matrix value)
 	{
 		//D3DXMatrixTranspose(&data.invView, &value);
-		D3DXMatrixTranspose(&data.view, &value);
-		D3DXMatrixTranspose(&data.invView, &data.view);
+		D3DXMatrixTranspose(&data.view, &value);		//뷰의 역행렬
+		D3DXMatrixTranspose(&data.invView, &data.view);	//역행렬을 거치지 않은 순수 뷰
+		//data.invView = value;
 	}
 
 	void SetProjection(Matrix value)
@@ -30,7 +31,8 @@ public:
 	}
 
 	Matrix GetProjection() { return data.projection; }
-	Matrix GetView() { return data.view; }
+	Matrix GetView() { return data.view; }		//역행렬을 거친 뷰
+	Matrix GetInvView() { return data.invView; }//역행렬을 거치지않은 뷰
 };
 
 class WorldBuffer : public ConstBuffer

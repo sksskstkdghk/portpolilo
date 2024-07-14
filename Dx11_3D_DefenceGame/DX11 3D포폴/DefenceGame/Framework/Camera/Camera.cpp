@@ -49,13 +49,13 @@ Ray Camera::GetPickingRay()
 
 	Vector2 point;
 
-	point.x = (2 * mousePos.x / screenSize.x) - 1.0f;
-	point.y = ((2 * mousePos.y / screenSize.y) - 1.0f) * -1.0f;
+	point.x = (2 * mousePos.x / screenSize.x) - 1.0f;			//(왼쪽~오른쪽)-1.0f~1.0f
+	point.y = ((2 * mousePos.y / screenSize.y) - 1.0f) * -1.0f;	//(아래~위)-1.0f~1.0f
 
 	Matrix projection = VP->GetProjection();
 
-	point.x /= projection._11;
-	point.y /= projection._22;
+	point.x /= projection._11;	//투영행렬의 [1][1]값은 x값의 변환에 영향을 줌
+	point.y /= projection._22;	//투영행렬의 [2][2]값은 y값의 변환에 영향을 줌
 
 	Matrix invView;
 	D3DXMatrixTranspose(&invView, &matView);

@@ -14,9 +14,9 @@
 
 #define MAX_MODEL_BONE 256
 #define MAX_MODEL_KEY 500
-#define MAX_MODEL_INSTANCE 500
+#define MAX_MODEL_INSTANCE 500	//각 모델별 최대 생성 수
 
-#define MAX_RAND_RENDER_SIZE 700
+#define MAX_RAND_RENDER_SIZE 700//화면에 그려질 최대 땅 사이즈
 #define IMGUI_FONT_SCALE_SIZE 1.5f
 
 #define DEBUG(hr) assert(SUCCEEDED(hr))
