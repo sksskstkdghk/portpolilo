@@ -13,3 +13,11 @@ C:\Users\sanghwa\Desktop\PortPolilo\Server\PacketGenerator\obj\Debug\refint\Pack
 C:\Users\sanghwa\Desktop\PortPolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.pdb
 C:\Users\sanghwa\Desktop\PortPolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache
 C:\Users\sanghwa\Desktop\PortPolilo\Server\PacketGenerator\obj\Debug\ref\PacketGenerator.dll
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.AssemblyInfoInputs.cache
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.AssemblyInfo.cs
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.csproj.CoreCompileInputs.cache
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.sourcelink.json
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.dll
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\refint\PacketGenerator.dll
+C:\Users\skssk\Desktop\Portpolilo\portpolilo\Server\PacketGenerator\obj\Debug\PacketGenerator.pdb

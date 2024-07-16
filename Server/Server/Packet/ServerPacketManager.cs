@@ -6,21 +6,18 @@ class PacketManager
 {
     #region Singleton
     static PacketManager instance;
-    public static PacketManager Instance
-    {
-        get
-        {
-            if(instance == null)
-                instance = new PacketManager();
-            return instance;
-        }
-    }
+    public static PacketManager Instance { get{ return instance; } }
     #endregion
 
     Dictionary<ushort, Action<PacketSession, ArraySegment<byte>>> onRecv = 
         new Dictionary<ushort, Action<PacketSession, ArraySegment<byte>>>();
     Dictionary<ushort, Action<PacketSession, IPacket>> handler =
         new Dictionary<ushort, Action<PacketSession, IPacket>>();
+
+    PacketManager()
+    {
+        Register();
+    }
 
     public void Register()
     {

@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K1iKNFO3KnKX6sQikXnbr9d8fQcqDA7vFH/GScSGosGW0oZntChGcNS+jhoTlQSPyyOJXrDHcyqhu9leYovMbg==",
+  "dgSpecHash": "PwOMoIuTiNY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\DummyClient\\DummyClient.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\sanghwa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\DummyClient\\DummyClient.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

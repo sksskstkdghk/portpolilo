@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\PacketGenerator\\PacketGenerator.csproj": {}
+    "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\PacketGenerator\\PacketGenerator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\PacketGenerator\\PacketGenerator.csproj": {
+    "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\PacketGenerator\\PacketGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\PacketGenerator\\PacketGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\PacketGenerator\\PacketGenerator.csproj",
         "projectName": "PacketGenerator",
-        "projectPath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\PacketGenerator\\PacketGenerator.csproj",
-        "packagesPath": "C:\\Users\\sanghwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\PacketGenerator\\obj\\",
+        "projectPath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\PacketGenerator\\PacketGenerator.csproj",
+        "packagesPath": "C:\\Users\\skssk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\PacketGenerator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sanghwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\skssk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

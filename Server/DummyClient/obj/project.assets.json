@@ -27,24 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sanghwa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\skssk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\DummyClient\\DummyClient.csproj",
+      "projectUniqueName": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\DummyClient\\DummyClient.csproj",
       "projectName": "DummyClient",
-      "projectPath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\DummyClient\\DummyClient.csproj",
-      "packagesPath": "C:\\Users\\sanghwa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\DummyClient\\obj\\",
+      "projectPath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\DummyClient\\DummyClient.csproj",
+      "packagesPath": "C:\\Users\\skssk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\DummyClient\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sanghwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\skssk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\ServerCore\\ServerCore.csproj": {
-              "projectPath": "C:\\Users\\sanghwa\\Desktop\\PortPolilo\\Server\\ServerCore\\ServerCore.csproj"
+            "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\ServerCore\\ServerCore.csproj": {
+              "projectPath": "C:\\Users\\skssk\\Desktop\\Portpolilo\\portpolilo\\Server\\ServerCore\\ServerCore.csproj"
             }
           }
         }
@@ -68,6 +63,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -84,18 +84,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.32, 3.1.32]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
