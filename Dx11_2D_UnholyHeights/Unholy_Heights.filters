@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="GameNode.h" />
+    <ClInclude Include="MyFunc.h" />
+    <ClInclude Include="Object\Rect.h" />
+    <ClInclude Include="Object\Circle.h" />
+    <ClInclude Include="Singleton\SoundManager.h" />
+    <ClInclude Include="Singleton\SingletonBase.h" />
+    <ClInclude Include="Singleton\TimeManager.h" />
+    <ClInclude Include="Singleton\KeyManager.h" />
+    <ClInclude Include="Object\Shader.h" />
+    <ClInclude Include="Singleton\CameraManager.h" />
+    <ClInclude Include="Object\Image.h" />
+    <ClInclude Include="Singleton\ImageManager.h" />
+    <ClInclude Include="Singleton\WriteManager.h" />
+    <ClInclude Include="Singleton\SceneManager.h" />
+    <ClInclude Include="MiniGame\Loading.h" />
+    <ClInclude Include="Mension\MainScene.h" />
+    <ClInclude Include="Mension\GameScene.h" />
+    <ClInclude Include="MensionObject\Apart.h" />
+    <ClInclude Include="Object\Button.h" />
+    <ClInclude Include="MensionObject\RoomInfo.h" />
+    <ClInclude Include="Character\Character.h" />
+    <ClInclude Include="MensionObject\Room.h" />
+    <ClInclude Include="Singleton\CharacterManager.h" />
+    <ClInclude Include="Object\Bullet.h" />
+    <ClInclude Include="MensionObject\Quest.h" />
+    <ClInclude Include="Singleton\QuestManager.h" />
+    <ClInclude Include="MensionObject\KingRoom.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Object\Rect.cpp" />
+    <ClCompile Include="Object\Circle.cpp" />
+    <ClCompile Include="Singleton\SoundManager.cpp" />
+    <ClCompile Include="Singleton\TimeManager.cpp" />
+    <ClCompile Include="Singleton\KeyManager.cpp" />
+    <ClCompile Include="Object\Shader.cpp" />
+    <ClCompile Include="Singleton\CameraManager.cpp" />
+    <ClCompile Include="Object\Image.cpp" />
+    <ClCompile Include="Singleton\ImageManager.cpp" />
+    <ClCompile Include="Singleton\WriteManager.cpp" />
+    <ClCompile Include="Singleton\SceneManager.cpp" />
+    <ClCompile Include="MiniGame\Loading.cpp" />
+    <ClCompile Include="Mension\MainScene.cpp" />
+    <ClCompile Include="Mension\GameScene.cpp" />
+    <ClCompile Include="MensionObject\Apart.cpp" />
+    <ClCompile Include="Object\Button.cpp" />
+    <ClCompile Include="MensionObject\RoomInfo.cpp" />
+    <ClCompile Include="Character\Character.cpp" />
+    <ClCompile Include="MensionObject\Room.cpp" />
+    <ClCompile Include="Singleton\CharacterManager.cpp" />
+    <ClCompile Include="Object\Bullet.cpp" />
+    <ClCompile Include="MensionObject\Quest.cpp" />
+    <ClCompile Include="Singleton\QuestManager.cpp" />
+    <ClCompile Include="MensionObject\KingRoom.cpp" />
+    <ClCompile Include="Unholy_Heights.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Object\Basic.hlsl" />
+    <None Include="Object\Image.hlsl" />
+  </ItemGroup>
+</Project>
